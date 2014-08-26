@@ -331,8 +331,4 @@ class BlockData {
 }
 
 
-echo "id is ".        Block::AIR()->id()."\n";
-echo BlockData::blockIdToName()[0]."\n";
-print BlockData::blockIdToName()[1]."\n";
-
 ?>
