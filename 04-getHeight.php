@@ -24,10 +24,10 @@ $zPos = 0;
 $numOfArguments = $argc-1;
     
 if ($numOfArguments == 2){
-   $xPos = int($ARGV[1]);
-   $zPos = int($ARGV[2]);
+   $xPos = intval($argv[1]);
+   $zPos = intval($argv[2]);
 }else if ($numOfArguments == 0){
-   //just require_once the player position
+   //just use the player position
    $playerPos = $mc->player()->getTilePos();
    $xPos = $playerPos->x();
    $zPos = $playerPos->z();
@@ -38,7 +38,7 @@ else{
 }
 
 $height = $mc->getHeight($xPos, $zPos);
-$message = "Height is $height";
+$message = "Height of world is $height at ($xPos, $zPos)";
 echo("\n$message\n");
 // send message to the minecraft chat
 $mc->postToChat($message);
