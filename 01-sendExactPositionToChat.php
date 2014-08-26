@@ -16,7 +16,7 @@ $mc = Minecraft::create();
 
 // Get the position that the player is currently at
 $playerPosition = $mc->player()->getPos();
-var_dump($playerPosition);
+
 //format the output so that is one decimal place
 $message = sprintf("You are at (%.1f, %.1f, %.1f)", $playerPosition->x(), $playerPosition->y(), $playerPosition->z());
       
