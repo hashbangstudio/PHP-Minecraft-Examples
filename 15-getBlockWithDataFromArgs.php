@@ -24,11 +24,14 @@ if ($numOfArgs == 3){
 }else if($numOfArgs == 2){
      $xPos = intval($argv[1]);
      $zPos = intval($argv[2]);
-     # NOTE this is so that it gives the type of block that is height of world
+     #Get the block that would be stood on at this Horiz posn
      $yPos = $mc->getHeight($xPos, $zPos) - 1;
 
 }else{
     print("Number of arguments incorrect \n");
+    print("Expected 2 or 3 arguments but got $numOfArgs \n");
+    print("Usage with 3 args: php script.php xcoord ycoord zcoord\n");
+    print("Usage with 2 args: php script.php xcoord zcoord\n");
     exit();
 }
 

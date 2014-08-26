@@ -23,7 +23,6 @@ $blockZposn = $playerPosition->z() + 1;
 $message = "Creating block at ($blockXposn, $blockYposn, $blockZposn)\n";
 
 print($message."\n");
-var_dump(Block::DIAMOND_BLOCK());
 # Create a block
 $mc->setBlock($blockXposn, $blockYposn, $blockZposn, Block::DIAMOND_BLOCK());
 

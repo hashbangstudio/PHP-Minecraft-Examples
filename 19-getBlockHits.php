@@ -21,6 +21,7 @@ while(1){
             print "$hit\n";
         }
     }
+    sleep(1);
 }
 
 ?>

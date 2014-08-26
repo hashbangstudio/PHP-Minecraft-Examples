@@ -16,7 +16,7 @@ $mc = Minecraft::create();
 $playerPos = $mc->player()->getTilePos();
 
 
-$message = "You are at (".$playerPos->x().", ".$playerPos->z().")";
+$message = "You are at (".$playerPos->x().", ".$playerPos->y().", ".$playerPos->z().")";
 echo($message."\n");
 # send message to the minecraft chat
 $mc->postToChat($message);
@@ -37,7 +37,7 @@ $newYpos =  $mc->getHeight($newXpos, $newZpos);
 $mc->player()->setTilePos($newXpos, $newYpos, $newZpos);
 
 $playerPos = $mc->player()->getTilePos();
-$message = "You have been moved to (".$playerPos->x().", ".$playerPos->z().")";
+$message = "You have been moved to (".$playerPos->x().", ".$playerPos->y().", ".$playerPos->z().")";
 
 echo($message."\n");
 # send message to the minecraft chat
