@@ -4,14 +4,14 @@ error_reporting(E_ALL);
 require_once 'mcpi/block.php';
 
 class BlockData {
-    
-    /* NOTE that in this class 
+
+    /* NOTE that in this class
         private static properties and public static functions to access them
         have been declared next to each other for easy maintenance
         The blockIdToName has to be initialised in static function if null
         as the id functions are expressions;
     */
-    
+
     //Use final private constructor to prevent instantiation
     final private function __construct(){
         //Do nothing
@@ -21,14 +21,13 @@ class BlockData {
     final private function __clone(){
         //Do nothing
     }
-    
-    
+
+
     private static $blockIdToName = NULL;
-    
+
     public static function blockIdToName(){
        if (self::$blockIdToName === NULL){
-          //var_dump(self::$blockIdToName);
-           self::$blockIdToName =  array(  
+           self::$blockIdToName =  array(
                 Block::AIR()->id() => 'AIR',
                 Block::STONE()->id() =>'STONE',
                 Block::GRASS()->id() =>'GRASS',
@@ -113,7 +112,7 @@ class BlockData {
         'safe'  => 0,
         'armed' => 1
     );
-    
+
     public static function tntTypeNameToId(){
         return BlockData::$tntTypeNameToId;
     }
@@ -147,7 +146,7 @@ class BlockData {
 
     // only 0-2 seem to do anything for texture
     // 0 to 3 is type, beyond that is decay counter
-    // avilablerange 0-15 
+    // avilablerange 0-15
     private static $leavesTypeNameToId = array(
         'oak'   => 0,
         'pine'  => 1,
@@ -217,7 +216,7 @@ class BlockData {
     //available 0-15
     // only 1 to 5 does anything
     // 6 and 7 wil use default stone
-    // above that just cycles back round 
+    // above that just cycles back round
     private static $doubleSlabTypeNameToId = array(
         'stone'            => 0,
         'sandstone'        => 1,
@@ -261,7 +260,7 @@ class BlockData {
     // available 0 to 3
     // no effect seemingly
     private static $grassTypeNameToId = array(
-        'shub'        => 0,
+        'shrub'        => 0,
         'grass'       => 1,
         'fern'        => 2,
         'biome-shrub' => 3
